@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../../interfaces/hook";
-
-import { Box, Divider, Flex, Select, Spacer } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+import { Box, Divider, Flex, Select, Spacer  } from "@chakra-ui/react";
 import { SearchInput } from "../index";
 import { getPokemons, onFilterOptions } from "../../store/slices/pokemon";
 import { useEffect } from "react";
@@ -77,10 +77,21 @@ export const NavBar = () => {
         >
           <option value="EMPTY">Filters</option>
           <option value="A-Z">From A-Z</option>
-          <option value="Z-A">From Z-A</option>
+          <option value="Z-A"> Sort Items </option>
           <option value="HEIGHT">By Height</option>
           <option value="WEIGHT">By Weight</option>
         </Select>
+        
+          <Button
+                borderRadius={0}
+                type="submit"
+                variant="solid"
+                colorScheme="teal"
+                w={{ base: "100%", md: "150px", lg: "250px" }}
+                order={{ base: "3", md: "4" }}
+              >
+                Login
+              </Button>
       </Flex>
       <Divider />
     </>
